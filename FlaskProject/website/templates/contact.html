@@ -1,0 +1,103 @@
+{% extends 'base.html' %}
+
+{% block title %}Contact{% endblock %}
+
+{% block content %}
+<h1>Contact Us</h1>
+<p>Get in touch with us.</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f2f2f2;
+    }
+
+    .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        border: 2px solid #a9a9a9; /* Light gray border */
+    }
+
+    th, td {
+        padding: 8px;
+        text-align: left;
+    }
+
+    th {
+        background-color: #f2f2f2; /* Light gray background for table header */
+    }
+
+    .second-table {
+        margin-top: 20px;
+        border: 2px solid #87CEEB; /* Light blue border */
+    }
+
+</style>
+</head>
+<body>
+
+<div class="container">
+    <table>
+        <thead>
+            <tr>
+                <th>Contact Information</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Name:</td>
+                <td>Timur</td>
+            </tr>
+            <tr>
+                <td>Email:</td>
+                <td>lalkekov@mail.ru</td>
+            </tr>
+            <tr>
+                <td>Phone:</td>
+                <td>+48 694 685 890</td>
+            </tr>
+            <tr>
+                <td>Address:</td>
+                <td>Jaroslawa Dabrowskiego 60A, Rzeszow, Poland</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <table class="second-table">
+        <thead>
+            <tr>
+                <th>Office Hours</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Monday - Friday:</td>
+                <td>9:00 AM - 5:00 PM</td>
+            </tr>
+            <tr>
+                <td>Saturday:</td>
+                <td>10:00 AM - 2:00 PM</td>
+            </tr>
+            <tr>
+                <td>Sunday:</td>
+                <td>Closed</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+</body>
+</html>
+
+<p>{{ ai_generated_text }}</p>
+{% endblock %}

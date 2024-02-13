@@ -1,0 +1,83 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<h1>Welcome to our VolunteerUnity</h1>
+<html>
+<head>
+    <title>Home</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Find volunteer organizations and apply to join them!</h1>
+    </header>
+    <div class="image-container">
+    
+        <img src="{{ url_for('static', filename='volunteer3.jpg') }}" alt="Volunteer Image" class="small-image">
+    </div>
+    <div class="calendar">
+        <h2>Upcoming Events</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Global Youth Service Day</th>
+                    <th>National Volunteer Week</th>
+                    <th>European Volunteering Capital 2024</th>
+                    <th>Asia-Pacific Volunteer Conference (APVC)</th>
+                    <th>International Volunteer Day</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="event">
+                        <div class="event-time">Date: April 15-17, 2024</div>
+                        <div class="event-details">
+                            Location: Worldwide
+                            Description: Largest youth service event globally.
+                        </div>
+                    </td>
+                    <td class="event">
+                        <div class="event-time">Date: April 17-23, 2024</div>
+                        <div class="event-details">
+                            Location: United States and Canada
+                            Description: Celebrates volunteers' contributions.
+                        </div>
+                    </td>
+                    <td class="event">
+                        <div class="event-time">Date: Throughout 2024</div>
+                        <div class="event-details">
+                            Location: Nantes, France
+                            Description: Year-long celebration of volunteerism.
+                        </div>
+                    </td>
+                    <td class="event">
+                    <div class="event-time"> Date:Aug 7-10, 2024 </div>
+                    <div class="event-details">
+                        Location: Bangkok, Thailand
+                        Description: Convenes volunteer leaders.
+                    </td>
+                    </td>
+                    <td class="event">
+                    <div class="event-time"> Date: Dec 5, 2024 </div>
+                    <div class="event-details">
+                        Location: Worldwide
+                        Description: Celebrates global volunteering.
+                     </td>
+                    <td class="empty"></td>
+                </tr>
+                <!-- Add more rows for additional weeks/days -->
+                <!-- You can add more events for other days here -->
+            </tbody>
+        </table>
+    </div>
+    
+    <footer>
+        &copy; 2024 VolunteerUnity
+    </footer>
+</body>
+</html>
+
+<p>{{ ai_generated_text }}</p>
+{% endblock %}  

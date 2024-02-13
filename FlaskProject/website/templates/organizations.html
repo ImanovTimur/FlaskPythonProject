@@ -1,0 +1,91 @@
+{% extends 'base.html' %}
+
+{% block title %}Volunteer Organizations{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1>Volunteer Organizations</h1>
+    <table class="organizations-table">
+        <tr>
+            <th>Country</th>
+            <th>Organization</th>
+            <th>Description</th>
+            <th>Contact</th>
+        </tr>
+        <tr>
+            <td><img src="{{ url_for('static', filename='images/flagpoland.jpg')}}" class="flag-icon"></td>
+            <td>Polish Humanitarian Action (PAH)</td>
+            <td>Polish Humanitarian Action (PAH) is a leading NGO based in Poland, dedicated to providing vital humanitarian aid to communities worldwide. With a focus on saving lives and alleviating suffering, PAH delivers essential services such as emergency relief, healthcare, food assistance, and shelter provision in response to crises and conflicts globally. Through collaborative efforts and advocacy, PAH strives to address humanitarian challenges and promote sustainable development across regions affected by adversity.</td>
+            <td><li><a href="https://www.pah.org.pl/" target="_blank">Link</a></li></td>
+        </tr>
+        <tr>
+            <td><img src="{{ url_for('static', filename='images/flagireland.jpg')}}" class="flag-icon"></td>
+            <td>Volunteer Ireland</td>
+            <td>Volunteer Ireland is the national volunteer development agency and a support body for all local Volunteer Centers and Volunteering Information Services in Ireland. They provide support, training, and resources to volunteer-involving organizations across the country.</td>
+            <td><li><a href="https://www.volunteer.ie" target="_blank">Link</a></li></td>
+        </tr>
+        <tr>
+            <td><img src="{{ url_for('static', filename='images/flagengland.jpg') }}"class="flag-icon"></td>
+            <td>Volunteering England</td>
+            <td>Volunteering England is a national charity and membership organization supporting volunteering and volunteer-involving organizations across England. They offer resources, training, and advocacy to promote and support volunteering initiatives.</td>
+            <td> <li><a href="https://www.ncvo.org.uk/#/" target="_blank">Link</a></li></td>
+        </tr>
+        <tr>
+            <td><img src="{{ url_for('static', filename='images/flagbelgium.jpg') }}"class="flag-icon"></td>
+            <td>Serve the City - Brussels</td>
+            <td>Serve the City Brussels is a volunteer organization based in Brussels, Belgium. They organize various volunteer projects aimed at serving the local community, including helping the homeless, supporting refugees, and assisting vulnerable populations.</td>
+            <td><li><a href="https://www.servethecity.brussels" target="_blank">Link</a></li></td>
+        </tr>
+        <tr>
+            <td><img src="{{ url_for('static', filename='images/flagnorthireland.jpg') }}"class="flag-icon" ></td>
+            <td>Volunteer Now</td>
+            <td>Volunteer Now is the lead organization for promoting and supporting volunteering across Northern Ireland. They offer volunteer management training, support services, and opportunities to connect individuals with volunteering roles in their local communities.</td>
+            <td><li><a href="https://www.volunteernow.co.uk" target="_blank">Link</a></li></td>
+        </tr>
+        <!-- Add more rows for additional organizations as needed -->
+        <tr>
+            <td colspan="4"><hr></td> <!-- Add horizontal line between table and list -->
+        </tr>
+    </table>
+    <p>{{ ai_generated_text }}</p>
+</div>
+<style>
+    .container {
+        max-width: 800px;
+        margin: 0 auto; /* Center the container */
+        padding: 20px;
+    }
+
+    .organizations-table {
+        width: 100%;
+        border-collapse: collapse; /* Collapse borders between cells */
+        margin-top: 20px;
+    }
+
+    .organizations-table th, .organizations-table td {
+        padding: 8px; /* Add padding to cells */
+        border: 1px solid #ddd; /* Add borders */
+    }
+
+    .organizations-table th {
+        background-color: #f2f2f2; /* Light gray background for table header */
+    }
+
+    .organizations-table tr:nth-child(even) {
+        background-color: #f9f9f9; /* Alternate row colors */
+    }
+
+    ul {
+        list-style-type: none; /* Remove bullet points from list */
+        padding: 0; /* Remove default padding */
+    }
+
+    ul li {
+        margin-bottom: 10px; /* Add margin between list items */
+    }
+    .flag-icon {
+        width: 40px; 
+        height: auto; 
+    }
+</style>
+{% endblock %}
